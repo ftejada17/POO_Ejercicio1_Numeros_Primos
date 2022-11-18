@@ -40,11 +40,21 @@ public class NumerosPrimos
 
     private boolean isPrime(int n)
     {
-        for(int i = 2; i < n; i++)
+        //#region ciclos for deberían hacer los ciclos que se espera de ellos y no terminar antes
+        //for(int i = 2; i < n; i++)
+        //{
+        //    if(n%i == 0) return false;
+        //}
+        //return true;
+        //#endregion
+
+        
+        int i = 2;
+        while(n%i != 0)
         {
-            if(n%i == 0) return false;
+            i++;
         }
-        return true;
+        return n==i;
     }
     private void resetSuma()
     {
